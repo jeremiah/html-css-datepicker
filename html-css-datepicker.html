@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<head>
+  <title>jeremiahfoster.com | Work in progress</title>
+  <link rel="shortcut icon" type="image/png" href="images/jf.favicon.ico"/>
+  <link rel="icon" type="image/png" href="images/jf.favicon.ico"/> 
+  <meta http-equiv="Cache-control" content="public">
+  <meta name="keywords" content="Personal web site for Jeremiah C. Foster" />
+  <link rel="author" href="https://jeremiahfoster.com/humans.txt" type="text/plain" />
+  <meta name="author" content="jeremiah foster" />
+  <meta name="copyright" content="Jeremiah Foster 2022" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+* {
+    vertical-align:	baseline;
+    border:		0 none;
+    outline:		0;
+    padding:		0;
+    margin:		0;
+    text-decoration:	none;
+    box-sizing:         border-box;    
+}
+
+body { 
+    background: whitesmoke;
+    margin:     2em;
+}
+
+.flex-container {
+    /* We first create a flex layout context */
+    display: flex;
+    
+    /* Then we define the flow direction 
+     * and if we allow the items to wrap 
+     * Remember this is the same as:
+     * flex-direction: row;
+     * flex-wrap: wrap;
+     */
+    flex-flow: row wrap;
+    
+    /* Then we define how to distribute the remaining space */
+    justify-content: space-around;
+    
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+h2 {
+    font: 2rem 'Fira Sans', sans-serif;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    font: 1.5rem 'Fira Sans', sans-serif;
+}
+
+input,label {
+    margin: 0.4rem 0;
+}
+
+#note {
+    width: 80%;
+}
+
+input[type=submit] {
+    padding: 20px;
+    background: #3366ff;
+    color: white;
+    border: 2px solid #99ccff;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 12px;
+    font: 1.5rem 'Fira Sans', sans-serif;
+}
+
+input[type=date] {
+    padding: 20px;
+    border: 1px solid black;
+    font-weight: bold;
+    cursor: pointer;
+    font: 1.5rem 'Fira Sans', sans-serif;
+}
+
+.row {
+    display: flex;
+}
+
+/* Create two equal columns that sit next to each other */
+.col {
+    flex: 1;
+    padding: 2rem 0rem 2rem 0rem;
+    word-break: break-word;
+    overflow-wrap: break-word;   
+}
+
+
+</style>
+  <body>
+    <h2>HTML Date picker</h2>
+  <div class="row">
+    <div class="col">
+    <form action="/action_page.php">
+      <label for="from">Start:</label> 
+      <input type="date" id="from" name="search-from" value="2022-01-01" min="2018-01-01" max="2022-12-31"> 
+    </div>
+    <div class="col">
+      <label for="end">End of search:</label> 
+      <input type="date" id="end" name="search-to" value="2022-12-24" min="2018-01-01" max="2022-12-31">
+      <br> &nbsp; <p>
+      <input type="submit" value="create report">
+    </form>
+    </div>
+    </div>
+    <div id="note">
+      <p>
+	<ul>
+	  <li>Note: The displayed date format will differ from the actual value &dash;
+	    the displayed date is formatted based on the locale of the user's
+	    browser, but the parsed value is always formatted yyyy-mm-dd.
+	  </li>
+	</ul>
+      </p>
+    </div>
+  </body>
+</html>
