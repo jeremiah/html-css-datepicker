@@ -1,16 +1,12 @@
 <!DOCTYPE HTML>
 <head>
-  <title>HTML / CSS date selection</title>
-  <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
-  <link rel="icon" type="image/png" href="favicon.ico"/> 
+  <title>HTML & CSS date selection</title>
   <meta http-equiv="Cache-control" content="public">
   <meta name="keywords" content="HTML CSS date picker selection" />
-  <link rel="author" href="https://jeremiahfoster.com/humans.txt" type="text/plain" />
   <meta name="author" content="jeremiah foster" />
-  <meta name="copyright" content="Jeremiah Foster 2022" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="copyright" content="2023 Jeremiah Foster" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-
 * {
     vertical-align:	baseline;
     border:		0 none;
@@ -95,22 +91,38 @@ input[type=date] {
     overflow-wrap: break-word;   
 }
 
+ul, li, h3 {
+    display: inline;
+}
+
 </style>
   <body>
     <h2>HTML Date picker</h2>
-  <div class="row">
-    <div class="col">
-    <form action="/action_page.php">
-      <label for="from">Start:</label> 
-      <input type="date" id="from" name="search-from" value="2022-01-01" min="2018-01-01" max="2022-12-31"> 
+    <div style="margin: 2em 0em 1em 0em; border: 1px solid black; padding: 1em;">
+     <h4>Frequent searches</h4><br>
+     <ul>
+       <li><h3><a href="https://www.jeremiahfoster.com/cgi-bin/search.py?search-from=2022-01-01&search-to=2022-12-31">Full year 2022</a></h3></li> &bull;
+       <li><h3><a href="https://www.jeremiahfoster.com/cgi-bin/search.py?search-from=2022-01-01&search-to=2022-03-31">Q1 22</a></h3></li> &bull;
+       <li><h3><a href="https://www.jeremiahfoster.com/cgi-bin/search.py?search-from=2022-04-01&search-to=2022-06-30">Q2 22</a></h3></li> &bull;
+       <li><h3><a href="https://www.jeremiahfoster.com/cgi-bin/search.py?search-from=2022-07-01&search-to=2022-09-30">Q3 22</a></h3></li> &bull;
+       <li><h3><a href="https://www.jeremiahfoster.com/cgi-bin/search.py?search-from=2022-10-01&search-to=2022-12-31">Q4 22</a></h3></li> &bull;
+       <li><h3><a href="https://www.jeremiahfoster.com/cgi-bin/search.py?search-from=2022-12-01&search-to=2022-12-31">Last Month</a></h3></li> &bull;
+       <li><h3><a href="https://www.jeremiahfoster.com/cgi-bin/search.py?search-from=2022-12-25&search-to=2022-12-31">Last Week (52)</a></h3></li> &bull;
+     </ul>
     </div>
-    <div class="col">
-      <label for="end">End of search:</label> 
-      <input type="date" id="end" name="search-to" value="2022-12-24" min="2018-01-01" max="2022-12-31">
-      <br> &nbsp; <p>
-      <input type="submit" value="create report">
+    <div class="row">
+      <div class="col">
+	<form action="/cgi-bin/search.py">
+	  <label for="from">Start:</label> 
+	  <input type="date" id="from" name="search-from" value="2022-01-01" min="2018-01-01" max="2022-12-31"> 
+      </div>
+      <div class="col">
+	<label for="end">End of search:</label> 
+	<input type="date" id="end" name="search-to" value="2022-12-24" min="2018-01-01" max="2022-12-31">
+	<br> &nbsp; <p>
+	  <input type="submit" value="create report">
     </form>
-    </div>
+      </div>
     </div>
     <div id="note">
       <p>
